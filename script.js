@@ -48,7 +48,7 @@ $(function() {
             $(".third").removeClass("active");
             $(".third .directory").removeClass("active");
         }
-        $(this).siblings().removeClass("active");
+        $(this).parent().children().removeClass("active");
 
         // Directories need to have data-target
         var target_name = "#" + $(this).attr("data-target");
