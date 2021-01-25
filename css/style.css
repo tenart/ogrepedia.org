@@ -1,0 +1,335 @@
+* {
+    image-rendering: pixelated;
+    font-family: sans-serif;
+    font-size: 0;
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url(../fonts/W95FA.otf);
+}
+
+@font-face {
+    font-family: "Heavy";
+    src: url(../fonts/Heavy.ttf)
+}
+
+span {
+    display: block;
+}
+
+p, h1 {
+    font-size: 16px;
+    text-rendering: geometricPrecision;
+    -webkit-text-rendering: geometricPrecision;
+}
+
+h1 {
+    font-family: Heavy;
+}
+
+p {
+    font-family: Regular;
+    line-height: 1.5;
+    /* font-size: 14px; */
+}
+
+p > img {
+    vertical-align:text-bottom ;
+}
+
+a {
+    color: #3d7c67;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: #4e4a7c;
+    color: white;
+}
+
+.center {
+    max-width: 960px;
+    min-width: 500px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    background: url(../img/header-50.gif) center left / auto 100% no-repeat,
+                url(../img/header-bg-75.gif) center left / auto 100% repeat-x;
+    width: 100%;
+    min-width: 560px;
+    height: 100px;
+    font-size: 0;
+    border-bottom: 2px solid #b3b3b3;
+}
+
+#logo {
+    height: 100px;
+}
+
+#nav {
+    height: 30px;
+    width: 100%;
+    position: relative;
+    margin-top: -30px;
+    text-align: right;
+}
+
+.nav-button {
+    display: inline-block;
+    vertical-align: top;
+    height: 26px;
+    color: #3d7c67;
+    text-align: center;
+    
+    border: 4px solid black;
+    
+    border-image: url("../img/tab-borders.gif") 2 fill / 4px stretch;
+    box-sizing: border-box;
+
+    margin-top: 4px;
+    margin-left: 2px;
+
+    padding: 0 12px;
+    padding-top: 4px;
+    opacity: 0.7;
+}
+
+.nav-button.active, .nav-button:hover {
+    margin-top: 0px;
+    height: 32px;
+    
+}
+
+.nav-button:hover {
+    height: 30px;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.nav-button.active {
+    pointer-events: none;
+    opacity: 1;
+}
+
+#content {
+    padding-top: 30px;
+}
+
+#banner {
+    /* background-color: #f8f8c8;
+    border: 2px solid #b3b38e; */
+    border-image: url("../img/banner-borders.gif") 2 fill / 4px stretch;
+    padding: 18px;
+    /* max-width: 600px; */
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #636355;
+}
+
+/*
+*   STYLING FOR HOME PAGE ELEMENTS
+*/
+
+#globe_container {
+    font-size: 0;
+    height: 300px;
+}
+
+#globe {
+    width: 300px;
+    height: 300px;
+    opacity: 0.5;
+    transform: translateX(-150px);
+    margin-left: 33%;
+    z-index: 8;
+    position: relative;
+}
+
+#globe_menu {
+    position: relative;
+    margin-top: -300px;
+    margin-left: 50%;
+    z-index: 9;
+}
+
+.globe_menu_item {
+    margin-top: 28px;
+    background-color: rgba(255, 0, 0, 0.226);
+    padding-left: 50px;
+    background: url(../img/icon-map.gif) top left / 40px 40px no-repeat;
+}
+
+.globe_menu_item:nth-child(1), .globe_menu_item:nth-child(4)  {
+    margin-left: calc(-30px - 50px);
+}
+
+.globe_menu_item:nth-child(2), .globe_menu_item:nth-child(3)  {
+    margin-left: calc(20px - 50px);
+}
+
+#globe_locations {
+    background-image: url(../img/icon-map.gif);
+}
+
+#globe_characters {
+    background-image: url(../img/icon-shrek.gif);
+}
+
+#globe_movies {
+    background-image: url(../img/icon-film-music.gif);
+}
+
+#globe_theories {
+    background-image: url(../img/icon-spyglass.gif);
+}
+
+#globe_about {
+    background-image: url(../img/icon-globe.gif);
+}
+
+/*
+*   STYLING FOR DATABASE PAGE ELEMENTS
+*/
+
+.window {
+    min-height: 70px;
+    border-image: url("../img/window-borders-sqare.gif") 10 fill / 20px stretch;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    font-size: 0;
+}
+
+.window_header {
+    display: block;
+    text-align: center;
+    font-size: 0;
+    height: 16px;
+    padding: 4px;
+    /* 24px total height*/
+}
+
+.window_header h1 {
+    background-color: #dadada;
+    display: inline-block;
+    padding: 0 6px;
+}
+
+.window_close {
+    height: 12px;
+    width: 12px;
+    background: url(../img/window-close-button.gif) center center / 100% 100%;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 4px;
+    box-shadow: 6px 0 0 0 #dadada;
+    cursor: pointer;
+}
+
+.window_close:active {
+    box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.2), 6px 0 0 0 #dadada;;
+}
+
+.window_content {
+    position: relative;
+    height: calc(24px * 6.5 + 26px);
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: -2px;
+    padding: calc(4px + 0px);
+    background-color: white;
+    border-image: url("../img/window-content-borders.gif") 2 fill/ 4px stretch;
+}
+
+.window_content_header {
+    text-align: center;
+    border-image: url(../img/window-basic-borders.gif) 1 fill / 2px stretch;
+    height: 24px;
+    margin-bottom: 2px;
+    box-shadow: 0 2px 0 0 black;
+    background-color: rgb(241, 241, 241);
+}
+
+.window_content iframe {
+    width: 100%;
+    height: 100%;
+    max-height: 800px;
+}
+
+.window_column {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100%/3 - 2px);
+    height: calc(100% - 26px);
+    border-right: 2px solid black;
+    overflow: scroll;
+}
+
+.window_column:nth-of-type(3) {
+    border: none;
+    width: calc(100%/3);
+}
+
+.window_column p {
+    /* height: 24px; */
+    padding-left: 32px;
+    padding-right: 4px;
+}
+
+.window_column p:nth-child(odd) {
+    background-color: #e2f7fd;
+}
+
+.window_column p.file_entry.active {
+    background-color: #3d7c67;
+    color: white;
+}
+
+.window_column p.file_entry:hover {
+    background-color: #4e4a7c;
+    color: white;
+    cursor: pointer;
+}
+
+.file_icon {
+    background: url(../img/file-icon-page.gif) 4px center / 24px 24px no-repeat;
+}
+
+.fi_text {
+    background-image: url(../img/file-icon-text.gif);
+}
+
+.fi_folder {
+    background-image: url(../img/file-icon-folder.gif);
+}
+
+.fi_info {
+    background-image: url(../img/file-icon-info.gif);
+}
+
+.window_column > span {
+    display: none;
+}
+
+.window_column > span.active {
+    display: block;
+}
+
+#iframe_hider {
+    display: none;
+}
+
+#iframe_window .window_content {
+    height: 600px;
+}
+
+#db_iframe {
+    filter: grayscale(1) brightness(1.5);
+}
