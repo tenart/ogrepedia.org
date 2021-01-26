@@ -96,6 +96,14 @@ a:hover {
     color: white;
 }
 
+
+hr {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    border: none;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
 .center {
     max-width: 960px;
     min-width: 500px;
@@ -383,4 +391,19 @@ a:hover {
 
 #db_iframe {
     filter: grayscale(1) brightness(1.5);
+}
+
+.divide_three {
+    font-size: 0;
+}
+
+.divide_column {
+    width: calc((100% - 64px) / 3);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 32px;
+}
+
+.divide_column:nth-last-child(1) {
+    margin-right: 0;
 }
